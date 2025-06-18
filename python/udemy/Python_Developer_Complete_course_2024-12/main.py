@@ -156,18 +156,18 @@ def ask_for_the_age(person_name):
     age = 0
     # global age
     while age == 0:
-        age_str = input(person_name + "what is your age?")
+        age_str = input(person_name + " what is your age?")
         try:
             age = int(age_str)
         except:
             print("ERROR: age must be a number")
     return age
 
-name1 = ask_for_name()
+# name1 = ask_for_name()
 # name2 = ask_for_name()
 
 # ask_for_the_age()
-age1 = ask_for_the_age(name1)
+# age1 = ask_for_the_age(name1)
 # age2 = ask_for_the_age(name2)
 
 # display results
@@ -176,9 +176,10 @@ age1 = ask_for_the_age(name1)
 # print(f"your name is {name2}, you are {age2} years old")
 # print(f"soon you will be {age2 + 1}")
 
-def display_person_info(name, age):
+def display_person_info(name, age, height=0):
     print()
     print(f"your name is {name}, you are {age} years old")
+    print("your name is %s, you are %s years old" %(name, age))
     print(f"soon you will be {age + 1}")
 
     if age == 17:
@@ -194,10 +195,27 @@ def display_person_info(name, age):
         print("you are an adult")
     elif age == 1 or age ==2:
         print("you are a baby")
-    elif age < 10:
-        print("you are a kid")
     else:
-        print("you are a minor")
+        print("you are a kid")
 
-display_person_info(name1, age1)
+    if not height == 0:
+        print("your height: " + str(height) + "m")
+
+# display_person_info(name1, age1)
 # display_person_info(name2, age2)
+
+NB_PERSONS = 1
+
+for i in range(0, NB_PERSONS):
+    # print(i)
+    name = "foo" + str(i + 1)
+    age =  ask_for_the_age(name)
+    display_person_info(name, age)
+
+print("""
+A first line
+    second line
+        third line      
+""")
+
+print("first", 5, 5.99, "last")

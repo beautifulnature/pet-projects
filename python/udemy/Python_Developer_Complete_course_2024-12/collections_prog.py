@@ -6,7 +6,8 @@
 # a = 5
 # b = "foo"
 
-persons = ("brain", "bob", "alice", "jean")
+# persons = ("brain", "bob", "alice", "jean")
+persons = ["brain", "bob", "alice", "jean"]
 # print(persons)
 # print(persons[0])
 # print(len(persons))
